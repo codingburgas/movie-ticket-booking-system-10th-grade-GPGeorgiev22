@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <conio.h>
 
+
 using namespace std;
 
 void aboutPage() {
@@ -43,8 +44,10 @@ void Menu::displayMenu() {
     } while (true);
 }
 
-void startMenu() {
-    while (true) {
+void startMenu() 
+{
+    while (true)
+    {
         system("cls");
         aboutPage();
         int newCheck;
@@ -63,7 +66,7 @@ void startMenu() {
                 }
                 else {
                     cout << "Permission denied!\n";
-                    _getch();
+                    (void)_getch();
                 }
             }
             else if (mainCheck == 2) {
@@ -73,7 +76,7 @@ void startMenu() {
                 Seat s(std::string("A1"));
                 s.bookSeat();
                 cout << "Payment done! Booking confirmed.\n";
-                _getch();
+                (void)_getch();
             }
         }
         else if (newCheck == 2) {
@@ -82,7 +85,7 @@ void startMenu() {
         }
         else {
             cout << "Invalid input!\n";
-            _getch();
+            (void)_getch();
         }
     }
 }

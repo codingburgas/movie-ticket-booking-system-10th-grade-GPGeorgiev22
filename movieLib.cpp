@@ -1,4 +1,3 @@
-
 #include "movieLib.h"
 #include <iostream>
 #include <string>
@@ -17,6 +16,7 @@ void Movie::displayMovie() {
 }
 
 // Administrator methods
+
 void Administrator::changePass() {
     std::string newPass;
     std::cout << "Enter new admin password: ";

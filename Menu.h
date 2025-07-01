@@ -1,6 +1,3 @@
-#ifndef MENU_H
-#define MENU_H
-
 #include "movieLib.h"
 #include "Login.h"
 
@@ -11,8 +8,7 @@ class Menu {
 public:
     Movie m;
     Administrator a;
-
     void displayMenu();
 };
 
-#endif
+
