@@ -9,6 +9,8 @@ bool Login::compare(const string& a, const string& b) {
 }
 
 bool Login::adminLogin() {
+    system("cls"); 
+
     string userName, pass;
     cout << "Enter username: ";
     cin >> userName;
@@ -16,7 +18,7 @@ bool Login::adminLogin() {
     cin >> pass;
 
     string user, userPass;
-    bool nCheck = false, aCheck = false;
+    bool loginSuccess = false;
 
     ifstream userData("admins.txt");
     if (!userData) {
@@ -25,16 +27,16 @@ bool Login::adminLogin() {
     }
 
     while (userData >> user >> userPass) {
-        if (compare(user, userName)) {
-            nCheck = true;
-        }
-        if (compare(userPass, pass)) {
-            aCheck = true;
+        if (compare(user, userName) && compare(userPass, pass)) {
+            loginSuccess = true;
+            break; 
         }
     }
     userData.close();
 
-    if (nCheck && aCheck) {
+    system("cls"); 
+
+    if (loginSuccess) {
         cout << "Login successful!\n";
         return true;
     }
