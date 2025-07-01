@@ -1,7 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include "MovieLib.h"
+#include "movieLib.h"
 #include "Login.h"
 
 void aboutPage();

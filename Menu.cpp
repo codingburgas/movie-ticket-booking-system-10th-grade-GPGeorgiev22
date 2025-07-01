@@ -63,17 +63,17 @@ void startMenu() {
                 }
                 else {
                     cout << "Permission denied!\n";
-                    getch();
+                    _getch();
                 }
             }
             else if (mainCheck == 2) {
                 cout << "Welcome, Customer!\n";
                 Movie m;
                 m.displayMovie();
-                Seat s("Gold");
+                Seat s(std::string("A1"));
                 s.bookSeat();
                 cout << "Payment done! Booking confirmed.\n";
-                getch();
+                _getch();
             }
         }
         else if (newCheck == 2) {
@@ -82,7 +82,7 @@ void startMenu() {
         }
         else {
             cout << "Invalid input!\n";
-            getch();
+            _getch();
         }
     }
 }
