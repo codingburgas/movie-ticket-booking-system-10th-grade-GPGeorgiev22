@@ -5,7 +5,9 @@
 class Movie {
 public:
     void addMovie();
-    void displayMovie();
+    void listMovies();
+    void removeMovie();
+    void editMovie();
 };
 
 class Administrator {

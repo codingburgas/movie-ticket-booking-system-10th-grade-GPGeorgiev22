@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include "movieLib.h"
 #include <iostream>
 #include <cstdlib>
 #include <conio.h>
@@ -21,8 +22,10 @@ void Menu::displayMenu() {
         cout << "********* Admin Menu *********\n";
         cout << "1. Add movie\n";
         cout << "2. Display movies\n";
-        cout << "3. Admin settings\n";
-        cout << "4. Exit\n";
+        cout << "3. Edit movies\n";
+        cout << "4. Remove movie\n";
+        cout << "5. Admin settings\n";
+        cout << "6. Exit\n";
         cout << "Select: ";
         cin >> enter;
         switch (enter) {
@@ -30,12 +33,18 @@ void Menu::displayMenu() {
             m.addMovie();
             break;
         case 2:
-            m.displayMovie();
+            m.listMovies();
             break;
         case 3:
-            a.changePass();
+            m.editMovie();
             break;
         case 4:
+            m.removeMovie();
+            break;
+        case 5:
+            a.changePass();
+            break;
+        case 6:
             cout << "Exiting...\n";
             exit(0);
         default:
@@ -72,7 +81,7 @@ void startMenu()
             else if (mainCheck == 2) {
                 cout << "Welcome, Customer!\n";
                 Movie m;
-                m.displayMovie();
+                m.listMovies();
                 Seat s(std::string("A1"));
                 s.bookSeat();
                 cout << "Payment done! Booking confirmed.\n";
