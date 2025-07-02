@@ -1,1 +1,3 @@
-g,g,g,21
+Spiderman,animation,bg,2020
+batman,animation,bg,2015
+spiderman,anime,bg,2010

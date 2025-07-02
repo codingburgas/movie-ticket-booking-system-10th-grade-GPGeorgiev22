@@ -9,6 +9,8 @@ public:
     Movie m;
     Administrator a;
     void displayMenu();
+    void bookSeatForMovie();
+    void aboutPage();
 };
 
 

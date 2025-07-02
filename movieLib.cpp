@@ -62,7 +62,7 @@ void Movie::listMovies() {
 void Movie::removeMovie() {
     std::ifstream inFile("movies.txt");
     if (!inFile) {
-        std::cerr << "Failed to open movies.txt for reading.\n";
+        std::cout << "Failed to open movies.txt for reading.\n";
         return;
     }
 
